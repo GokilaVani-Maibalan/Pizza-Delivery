@@ -8,7 +8,6 @@ import {
 import { payActions, verifyPaymentAction } from "../../actions/payActions";
 import { Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
-import "./cart.css";
 import { Link } from "react-router-dom";
 import Loader from "../Loader/loader";
 import logo from "../../utils/logo.png";

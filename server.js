@@ -3,11 +3,15 @@ const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    process.env.DB_CONNECTION.replace("<PASSWORD>", process.env.DB_PASSWORD)
+    "mongodb+srv://gokilamaibalan64:Gokila%400318@cluster0.8rubk8j.mongodb.net/pizzadelivery?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: "true",
+      useUnifiedTopology: "true",
+    }
   )
   .then(() => console.log("Database connected successfully!"))
   .catch((err) => console.error(err));
 
-app.listen(process.env.PORT || 8000, (req, res) => {
+app.listen(process.env.PORT || 3000, (req, res) => {
   console.log(`Server started in port ${process.env.PORT}`);
 });

@@ -15,7 +15,7 @@ const NavBar = () => {
     <nav className="navbar sticky-top navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          PIZZERIA
+          Le Pezze
         </Link>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">

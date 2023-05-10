@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
   forgotPasswordAction,
@@ -38,7 +38,7 @@ const ForgotPassword = () => {
     setOTP("");
   };
   if (redirect) {
-    return <Redirect to="/login" />;
+    return <Navigate to="/login" />;
   }
   if (loading) {
     return <Loader />;

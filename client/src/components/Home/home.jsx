@@ -14,10 +14,12 @@ const Home = () => {
   const { pizzas, loading, error, message, filteredPizzas } = useSelector(
     (state) => state.getAllPizzasReducer
   );
+  console.log(pizzas, "pizzas");
   let pizzasRender = filteredPizzas;
   if (!pizzasRender) {
     pizzasRender = pizzas;
   }
+  console.log("pizzasRender", pizzasRender);
   const pages = Math.ceil(pizzasRender.length / 6);
   const [currPage, setCurrPage] = useState(1);
   useEffect(() => {

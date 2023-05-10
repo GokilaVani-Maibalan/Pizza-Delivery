@@ -8,7 +8,7 @@ import {
   editReviewAction,
   getReviewAction,
 } from "../../actions/userReviewAction";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
 
@@ -30,7 +30,7 @@ const Review = () => {
     }
   }, []);
   if (!user) {
-    return <Redirect to="/login" />;
+    return <Navigate to="/login" />;
   }
   if (error) {
     return <Error />;

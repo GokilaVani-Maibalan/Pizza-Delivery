@@ -7,15 +7,19 @@ const userRouter = require("./routes/userRoutes");
 const orderRouter = require("./routes/orderRoutes");
 const reviewRouter = require("./routes/reviewRoutes");
 const path = require("path");
+const bodyparser = require("body-parser");
 
 dotenv.config({
-  path: "./config.env",
+  path: ".env",
 });
 
 const app = express();
 app.use(express.json());
 app.use(morgan("tiny"));
 app.use(cors());
+
+app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.json());
 
 app.use("/api/pizzas", pizzaRouter);
 app.use("/api/users", userRouter);

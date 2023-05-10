@@ -7,7 +7,7 @@ import { orderAction } from "../../actions/orderActions";
 import { useEffect } from "react";
 import "./order.css";
 import { Modal } from "react-bootstrap";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import OrderDetail from "../OrderDetail/orderDetail";
 
 const month = [
@@ -38,7 +38,7 @@ const Order = () => {
     }
   }, []);
   if (!user) {
-    return <Redirect to="/login" />;
+    return <Navigate to="/login" />;
   }
   if (error) {
     return <Error />;

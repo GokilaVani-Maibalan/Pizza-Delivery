@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userLoginAction } from "../../actions/userActions";
 import Loader from "../Loader/loader";
@@ -22,7 +22,7 @@ const Login = () => {
     setPassword("");
   };
   if (user) {
-    return <Redirect to="/" />;
+    return <Navigate to="/" />;
   }
   if (loading) {
     return <Loader />;

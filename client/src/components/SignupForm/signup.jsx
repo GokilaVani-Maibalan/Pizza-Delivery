@@ -3,7 +3,7 @@ import "./signup.css";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { userSignUpAction } from "../../actions/userActions";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import Loader from "../Loader/loader";
 
 const Signup = () => {
@@ -41,7 +41,7 @@ const Signup = () => {
     }
   };
   if (redirect) {
-    return <Redirect to="/login" />;
+    return <Navigate to="/login" />;
   }
   if (loading) {
     return <Loader />;
