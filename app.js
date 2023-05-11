@@ -21,15 +21,16 @@ app.use(cors());
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 
+// app.use("/", pizzaRouter);
 app.use("/api/pizzas", pizzaRouter);
 app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/reviews", reviewRouter);
 
 if (process.env.NODE_ENV === "production") {
-  app.use("/", express.static("client/build"));
+  app.use("/", express.static("client"));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "/client/build/index.html"));
+    res.sendFile(path.resolve(__dirname, "/client"));
   });
 }
 

@@ -15,7 +15,8 @@ import Order from "./components/Order/order";
 import Me from "./components/Me/me";
 import Review from "./components/Review/review";
 
-export const url = "https://localhost:3000";
+// export const url = "https://localhost:3000";
+
 function App() {
   return (
     <>
