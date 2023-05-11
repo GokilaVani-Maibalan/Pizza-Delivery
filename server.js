@@ -12,6 +12,10 @@ mongoose
   .then(() => console.log("Database connected successfully!"))
   .catch((err) => console.error(err));
 
-app.listen(3000, (req, res) => {
+app.listen(8000, (req, res) => {
   console.log(`Server started in port ${process.env.PORT}`);
 });
+
+const baseURL = "http://localhost:8000";
+
+module.exports = baseURL;
